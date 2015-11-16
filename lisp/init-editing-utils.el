@@ -106,6 +106,22 @@
 ;; Show matching parens
 ;;----------------------------------------------------------------------------
 (show-paren-mode 1)
+   ;; * Here is some Emacs Lisp that will make the % key show the matching
+   ;; parenthesis, like in vi.  In addition, if the cursor isn't over a
+   ;; parenthesis, it simply inserts a % like normal.  (`Parenthesis' actually
+   ;;  includes and character with `open' or `close' syntax, which usually means
+   ;;  "()[]{}".)
+
+      ;; By an unknown contributor
+
+(defun match-paren (arg)
+    "Go to the matching parenthesis if on parenthesis otherwise insert %."
+    (interactive "p")
+    (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+          ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+          (t (self-insert-command (or arg 1)))))
+(global-set-key "%" 'match-paren)
+
 
 ;;----------------------------------------------------------------------------
 ;; Expand region
