@@ -41,7 +41,6 @@
 ;;(global-set-key "\C-c\C-c" 'compile)
 
 (global-set-key "\C-cg" 'goto-line)
-(global-set-key "%" 'match-paren)
 
 (global-set-key [f1] 'woman)
 (global-set-key [f3] 'rgrep)
