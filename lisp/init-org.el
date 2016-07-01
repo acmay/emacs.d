@@ -18,6 +18,7 @@
       org-export-coding-system 'utf-8
       org-fast-tag-selection-single-key 'expert
       org-html-validation-link nil
+      org-return-follows-link t
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
 
