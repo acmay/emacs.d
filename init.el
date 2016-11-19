@@ -114,6 +114,7 @@
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
+(setq visible-bell 1)
 (require 'init-misc)
 
 (require 'init-dash)
