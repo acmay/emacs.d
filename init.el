@@ -132,7 +132,7 @@
 ;;(require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
-(require-package 'regex-tool)
+(maybe-require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
@@ -159,6 +159,10 @@
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
+
+
+(when (maybe-require-package 'uptimes)
+  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
 
 
 (provide 'init)
