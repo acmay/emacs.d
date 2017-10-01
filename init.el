@@ -92,7 +92,7 @@
 (require 'init-csv)
 ;;(require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
+;;(require 'init-php)
 (require 'init-org)
 ;;(require 'init-nxml)
 (require 'init-html)
@@ -105,7 +105,7 @@
 (require 'init-elm)
 ;;(require 'init-ruby-mode)
 ;;(require 'init-rails)
-(require 'init-sql)
+;;(require 'init-sql)
 
 (require 'init-paredit)
 (require 'init-lisp)
