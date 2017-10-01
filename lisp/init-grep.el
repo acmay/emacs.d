@@ -1,5 +1,5 @@
 (setq-default grep-highlight-matches t
-              grep-scroll-output t)
+              grep-scroll-output nil)
 
 (when *is-a-mac*
   (setq-default locate-command "mdfind"))
