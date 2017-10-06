@@ -59,3 +59,10 @@
 
 (setq irfc-directory "~/Documents/rfc")
 (setq irfc-assoc-mode t)
+
+;; auto revert mode
+(global-auto-revert-mode 1)
+;; auto refresh dired when file changes
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
+(setq mouse-yank-at-point t)
