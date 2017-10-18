@@ -1,5 +1,3 @@
-(provide 'init-local)
-
 (setq backup-directory-alist '(("." . "~/.emacs.d/saves")))
 
 ;;Wipe the entire line instead of just the line contents
@@ -66,3 +64,6 @@
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
 (setq mouse-yank-at-point t)
+
+(provide 'init-local)
+;;; init-local ends here
