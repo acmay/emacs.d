@@ -1,6 +1,5 @@
 (when *is-a-mac*
   (setq mac-command-modifier 'meta)
-  (setq default-input-method "MacOSX")
   ;;(setq mac-option-modifier 'none)
   (setq mac-option-modifier 'meta)
 

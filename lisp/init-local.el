@@ -25,6 +25,20 @@
 (global-set-key [C-next] 'scroll-other-window)
 (global-set-key [C-prior] 'scroll-other-window-down)
 
+(defun scroll-both-down ()
+  "Scroll both windows down"
+  (interactive)
+  (scroll-down)
+  (scroll-other-window-down))
+(defun scroll-both ()
+  "Scroll both windows up"
+  (interactive)
+  (scroll-up)
+  (scroll-other-window))
+
+(global-set-key [C-S-next] `scroll-both)
+(global-set-key [C-S-prior] `scroll-both-down)
+
 ;;I want top/bottom of the file not the line
 (global-set-key [home] 'beginning-of-buffer)
 (global-set-key [end] 'end-of-buffer)
