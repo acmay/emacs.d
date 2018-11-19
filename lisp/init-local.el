@@ -67,7 +67,7 @@
 (setq scroll-margin 3)
 
 ;;
-(require-package 'irfc)
+;;(require-package 'irfc)
 
 (setq irfc-directory "~/Documents/rfc")
 (setq irfc-assoc-mode t)
