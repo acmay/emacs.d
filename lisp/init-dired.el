@@ -1,4 +1,3 @@
-(require-package 'dired-sort)
 (require-package 'peep-dired)
 
 (setq-default dired-dwim-target t)
