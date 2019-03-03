@@ -1,4 +1,7 @@
-;; -*- lexical-binding: t -*-
+;;; init-editing-utils.el --- Day-to-day editing helpers -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (require-package 'unfill)
 
 (when (fboundp 'electric-pair-mode)
@@ -61,7 +64,7 @@
 
 (when (maybe-require-package 'beacon)
   (setq-default beacon-lighter "")
-  (setq-default beacon-size 5)
+  (setq-default beacon-size 20)
   (add-hook 'after-init-hook 'beacon-mode))
 
 
@@ -84,8 +87,12 @@
 
 
 
-(unless (fboundp 'display-line-numbers-mode)
-  (require-package 'nlinum))
+(when (fboundp 'display-line-numbers-mode)
+  (setq display-line-numbers-width 3)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode))
+
+(when (maybe-require-package 'goto-line-preview)
+  (global-set-key [remap goto-line] 'goto-line-preview))
 
 
 (when (require-package 'rainbow-delimiters)
@@ -343,3 +350,4 @@ With arg N, insert N newlines."
 
 
 (provide 'init-editing-utils)
+;;; init-editing-utils.el ends here
