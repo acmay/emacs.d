@@ -10,7 +10,7 @@
               (ggtags-mode 1))))
 ;;; Print out the ascii-table in a new buffer
 (defun ascii-table ()
-  "Print the ascii table. Based on a defun by Alex Schroeder &lt;asc@bsiag.com&gt;"
+  "Print the ascii table.  Based on a defun by Alex Schroeder &lt;asc@bsiag.com&gt;."
   (interactive)
   (switch-to-buffer "*ASCII*")
   (erase-buffer)
@@ -26,12 +26,12 @@
 (global-set-key [C-prior] 'scroll-other-window-down)
 
 (defun scroll-both-down ()
-  "Scroll both windows down"
+  "Scroll both windows down together."
   (interactive)
   (scroll-down)
   (scroll-other-window-down))
 (defun scroll-both ()
-  "Scroll both windows up"
+  "Scroll both windows up together."
   (interactive)
   (scroll-up)
   (scroll-other-window))
