@@ -6,8 +6,8 @@
 
 ;;; Code:
 
-;; Produce backtraces when errors occur
-(setq debug-on-error t)
+;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
+;;(setq debug-on-error t)
 
 (let ((minver "24.4"))
   (when (version< emacs-version minver)
@@ -68,7 +68,6 @@
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
-;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
@@ -112,7 +111,7 @@
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-;;(require 'init-nix)
+(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
@@ -150,6 +149,8 @@
   (setq-default uptimes-keep-count 200)
   (add-hook 'after-init-hook (lambda () (require 'uptimes))))
 
+(when (fboundp 'global-eldoc-mode)
+  (add-hook 'after-init-hook 'global-eldoc-mode))
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
